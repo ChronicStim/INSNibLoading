@@ -162,6 +162,7 @@ static char INSNibLoadingOutletsKey;
 - (id)initWithCoder:(NSCoder *)aDecoder {
     if (self = [super initWithCoder:aDecoder]) {
         [self ins_loadContentsFromNib];
+        self.tag = [[self class] uniqueINSNibLoadedViewTag];
     }
     return self;
 }
@@ -169,10 +170,17 @@ static char INSNibLoadingOutletsKey;
 - (id)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
         [self ins_loadContentsFromNib];
+        self.tag = [[self class] uniqueINSNibLoadedViewTag];
         [self awakeFromNib];
     }
     
     return self;
+}
+
++(NSInteger)uniqueINSNibLoadedViewTag;
+{
+    // Must be set per class
+    return 101;
 }
 
 @end

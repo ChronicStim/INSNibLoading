@@ -56,4 +56,7 @@
 // you'll need to call ins_loadContentsFromNib yourself.
 //
 @interface INSNibLoadedView : UIView
+
++(NSInteger)uniqueINSNibLoadedViewTag;
+
 @end
