@@ -16,4 +16,4 @@ FOUNDATION_EXPORT const unsigned char INSNibLoadingVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <INSNibLoading/PublicHeader.h>
 
-#import "UIView+INSNibLoading.h"
+#import <INSNibLoading/UIView+INSNibLoading.h>
